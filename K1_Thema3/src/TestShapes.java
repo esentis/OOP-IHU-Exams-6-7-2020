@@ -56,7 +56,7 @@ public class TestShapes {
         // Scanner will handle the user input
         Scanner sc = new Scanner(System.in);
         // An ugly loop to get the 50 shapes of...grey :D
-        for (int i = 0; i <= 50; i++) {
+        for (int i = 0; i < 50; i++) {
             // Something beautiful to simulate 50/50 randomness.
             // randomNumber is either 0 : Circle or 1: Rectangle
             int randomNumber = (int) Math.floor((Math.random() * 2));
