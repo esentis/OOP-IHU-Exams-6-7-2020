@@ -70,7 +70,10 @@ public class TestSalary {
         for (int i = 0; i < 20; i++) {
             // Something beautiful to simulate 50/50 randomness.
             // randomNumber is either 0 : Oromisthios or 1: Symvasiouhos
-            int randomNumber = (int) Math.floor((Math.random() * 2));
+            // Legacy way
+            // int randomNumber = (int) Math.floor((Math.random() * 2));
+            // Fancier way of finding random with turnary not exactly 50-50 but still quite fair.
+            int randomNumber = Math.random() > 0.5 ? 0 : 1;
             if (randomNumber == 0) {
                 System.out.println("Seems like you are adding Oromisthios Worker, give the ORES he works\n");
                 // And we ask the user for the radius

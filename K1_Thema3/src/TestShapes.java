@@ -59,7 +59,9 @@ public class TestShapes {
         for (int i = 0; i < 50; i++) {
             // Something beautiful to simulate 50/50 randomness.
             // randomNumber is either 0 : Circle or 1: Rectangle
-            int randomNumber = (int) Math.floor((Math.random() * 2));
+            // int randomNumber = (int) Math.floor((Math.random() * 2));
+            // Fancier way of finding random with turnary not exactly 50-50 but still quite fair.
+            int randomNumber = Math.random() > 0.5 ? 0 : 1;
             System.out.println(randomNumber);
             // So if the shape is circle
             if (randomNumber == 0) {
@@ -83,7 +85,7 @@ public class TestShapes {
                     // And we ask the user for the radius
                     base = Double.parseDouble(sc.nextLine());
                 }
-                System.out.print("And lastly give the height");
+                System.out.print("And lastly give the height\n");
                 double height = Double.parseDouble(sc.nextLine());
                 while (height < 10 || height > 50) {
                     System.out.print("Obey the rules, height should be between 10 and 50\n");
