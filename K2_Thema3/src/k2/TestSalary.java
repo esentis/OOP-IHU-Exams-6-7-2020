@@ -13,33 +13,35 @@ import java.util.Scanner;
  */
 public class TestSalary {
 
-    // Well, the array is now of type Object because we dont have any Abstract class for Worker. 
-    public static double averageOromisthiosSalary(Object[] workers) {
+    // Well, the array is now of type Object because we dont have any Abstract class
+    // for Worker.
+    public static double averageOromisthiosSalary(Salary[] workers) {
         // Save all salaries to this variable
         double sum = 0;
-        // The actual average variable
-        double average = 0;
         // Increment when we find a oromosthio worker
         int oromisthioi = 0;
-        for (Object worker : workers) {
-            // This beauty checks if our worker objcet is ormisthios so it can start adding salary.
+        for (Salary worker : workers) {
+            // This beauty checks if our worker objcet is ormisthios so it can start adding.
+            // salary.
             if (worker instanceof Oromisthios) {
-                sum += ((Oromisthios) worker).salary();
+                sum += worker.salary();
             }
             oromisthioi++;
         }
-        average = sum / oromisthioi;
-        return average;
+        // Possible 0 division.
+        return sum / oromisthioi;
     }
 
-    public static double maxHmeromisthio(Object[] workers) {
+    public static double maxHmeromisthio(Salary[] workers) {
         double max = 0;
-        for (Object worker : workers) {
-            // This beauty checks if our worker object is Symvasiouhos so it can start looking for max.
+        for (Salary worker : workers) {
+            // This beauty checks if our worker object is Symvasiouhos so it can start
+            // looking for max.
             if (worker instanceof Symvasiouhos) {
-                // If the salary of the current worker is higher than the max, then it will become the new max
+                // If the salary of the current worker is higher than the max, then it will
+                // become the new max
                 if (((Oromisthios) worker).salary() > max) {
-                    max = ((Oromisthios) worker).salary();
+                    max = worker.salary();
                 }
             }
 
@@ -47,24 +49,18 @@ public class TestSalary {
         return max;
     }
 
-    public static double totalSalaries(Object[] workers) {
+    public static double totalSalaries(Salary[] workers) {
 
         double allSalaries = 0;
-        for (Object worker : workers) {
-            // IT'S UGLY, but it works.
-            if (worker instanceof Symvasiouhos) {
-                allSalaries += ((Symvasiouhos) worker).salary();
-            } else if (worker instanceof Oromisthios) {
-                allSalaries += ((Oromisthios) worker).salary();
-            }
-
+        for (Salary worker : workers) {
+            allSalaries += worker.salary();
         }
         return allSalaries;
     }
 
     public void main(String[] args) {
         // The workers array
-        Object[] workers = new Object[20];
+        Salary[] workers = new Salary[20];
         // Our scanner that will get us the user inputs
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < 20; i++) {
@@ -72,7 +68,8 @@ public class TestSalary {
             // randomNumber is either 0 : Oromisthios or 1: Symvasiouhos
             // Legacy way
             // int randomNumber = (int) Math.floor((Math.random() * 2));
-            // Fancier way of finding random with turnary not exactly 50-50 but still quite fair.
+            // Fancier way of finding random with turnary not exactly 50-50 but still quite
+            // fair.
             int randomNumber = Math.random() > 0.5 ? 0 : 1;
             if (randomNumber == 0) {
                 System.out.println("Seems like you are adding Oromisthios Worker, give the ORES he works\n");
@@ -106,7 +103,8 @@ public class TestSalary {
                 workers[i] = symv;
             }
         }
-        // The sum of salaries of Symvasiouhoi needs to be another loop in the object array
+        // The sum of salaries of Symvasiouhoi needs to be another loop in the object
+        // array
         double symvasiouhosSalarySum = 0;
         for (Object worker : workers) {
             if (worker instanceof Symvasiouhos) {

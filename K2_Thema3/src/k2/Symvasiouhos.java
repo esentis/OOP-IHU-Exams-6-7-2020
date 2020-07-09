@@ -25,17 +25,10 @@ public class Symvasiouhos implements Salary {
     }
 
     public void setMeres(double meres) {
-        try {
-            if (meres < 1 || meres > 25) {
-                throw new LathosEisodou("Obey the rules, meres must be between 1 and 25");
-            } else {
-                this.meres = meres;
-            }
-
-        } catch (LathosEisodou errMsg) {
-            System.out.println("Oops I caught an exception" + errMsg.getMessage());
-
+        if (meres < 1 || meres > 25) {
+            throw new LathosEisodou("Obey the rules, meres must be between 1 and 25");
         }
+        this.meres = meres;
 
     }
 
