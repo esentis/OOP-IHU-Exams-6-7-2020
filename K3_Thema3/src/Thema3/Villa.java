@@ -6,7 +6,6 @@
 package Thema3;
 
 /**
- *
  * @author esentis
  */
 public class Villa extends ExohikiKatoikia {
@@ -65,14 +64,11 @@ public class Villa extends ExohikiKatoikia {
     }
 
     public void setNrOfDays(int NrOfDays) {
-        try {
-            if (NrOfDays <= 30) {
-                throw new WrongRentPeriodException("Obey the rules,the rent days should be more than 30 days");
-            }
-            this.NrOfDays = NrOfDays;
-        } catch (WrongRentPeriodException errMsg) {
-            System.out.println("Something went wrong " + errMsg);
+
+        if (NrOfDays <= 30) {
+            throw new WrongRentPeriodException("Obey the rules,the rent days should be more than 30 days");
         }
+        this.NrOfDays = NrOfDays;
     }
 
     public int getTimiHmeras() {

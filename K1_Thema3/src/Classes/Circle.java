@@ -6,7 +6,6 @@
 package Classes;
 
 /**
- *
  * @author esentis
  */
 public class Circle implements Shape {
@@ -28,18 +27,11 @@ public class Circle implements Shape {
         return radius;
     }
 
-    public void setRadius(double radius) throws WrongDimensionsException {
-        try {
-            if (radius > 10 || radius < 50) {
-                this.radius = radius;
-            } else {
-                throw new WrongDimensionsException("Wrong Dimensions");
-            }
-        } catch (WrongDimensionsException errMsg) {
-            // We print the error message
-            System.out.println(errMsg.getMessage());
+    public void setRadius(double radius) {
+        if (radius < 10 || radius > 50) {
+            throw new WrongDimensionsException("Wrong Dimensions");
         }
-
+        this.radius = radius;
     }
 
     public double getPi() {
