@@ -139,5 +139,3 @@ nbdist/
 .history
 
 # End of https://www.toptal.com/developers/gitignore/api/java,netbeans,intellij+all,visualstudiocode
-
-sonar-project.properties
