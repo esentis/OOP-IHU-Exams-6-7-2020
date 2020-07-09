@@ -108,7 +108,7 @@ public class TestSalary {
         double symvasiouhosSalarySum = 0;
         for (Object worker : workers) {
             if (worker instanceof Symvasiouhos) {
-                symvasiouhosSalarySum += worker.salary();
+                symvasiouhosSalarySum += ((Symvasiouhos) worker).salary();
             }
         }
         System.out.println("THE SUM OF SUMVASIOUHON SALARY IS " + symvasiouhosSalarySum);
