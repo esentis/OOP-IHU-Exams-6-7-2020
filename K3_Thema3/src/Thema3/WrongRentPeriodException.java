@@ -9,7 +9,7 @@ package Thema3;
  *
  * @author esentis
  */
-public class WrongRentPeriodException extends Exception {
+public class WrongRentPeriodException extends IllegalArgumentException {
 
     public WrongRentPeriodException(String string) {
         super(string);

@@ -9,7 +9,7 @@ package k2;
  *
  * @author esentis
  */
-public class LathosEisodou extends Exception{
+public class LathosEisodou extends IllegalArgumentException{
 
     public LathosEisodou(String string) {
         super(string);

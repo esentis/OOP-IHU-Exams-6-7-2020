@@ -9,7 +9,7 @@ package Classes;
  *
  * @author esentis
  */
-class WrongDimensionsException extends Exception {
+class WrongDimensionsException extends IllegalArgumentException {
 
     WrongDimensionsException(String message) {
         super(message);
