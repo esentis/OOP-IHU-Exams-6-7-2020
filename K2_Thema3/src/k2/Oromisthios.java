@@ -22,7 +22,7 @@ public class Oromisthios implements Salary {
         return ores;
     }
 
-    public void setOres(double ores) {
+    public void setOres(double ores) throws LathosEisodou {
         if (ores < 1 || ores > 200) {
             throw new LathosEisodou("Obey the rules, ores must be between 1 and 200");
         }

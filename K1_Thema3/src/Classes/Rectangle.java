@@ -27,7 +27,7 @@ public class Rectangle implements Shape {
         return vasi;
     }
 
-    public void setVasi(double vasi){
+    public void setVasi(double vasi) throws WrongDimensionsException {
         if (vasi < 10 || vasi > 50) {
             throw new WrongDimensionsException("Wrong Dimensions");
         }

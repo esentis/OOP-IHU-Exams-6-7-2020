@@ -24,7 +24,7 @@ public class Symvasiouhos implements Salary {
         return meres;
     }
 
-    public void setMeres(double meres) {
+    public void setMeres(double meres) throws LathosEisodou{
         if (meres < 1 || meres > 25) {
             throw new LathosEisodou("Obey the rules, meres must be between 1 and 25");
         }
