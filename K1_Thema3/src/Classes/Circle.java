@@ -27,7 +27,7 @@ public class Circle implements Shape {
         return radius;
     }
 
-    public void setRadius(double radius) {
+    public void setRadius(double radius) throws WrongDimensionsException{
         if (radius < 10 || radius > 50) {
             throw new WrongDimensionsException("Wrong Dimensions");
         }

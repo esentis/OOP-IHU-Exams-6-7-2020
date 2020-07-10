@@ -63,7 +63,7 @@ public class Bungalow extends ExohikiKatoikia {
         return NrOfDays;
     }
 
-    public void setNrOfDays(int NrOfDays) {
+    public void setNrOfDays(int NrOfDays) throws WrongRentPeriodException{
         if (NrOfDays <= 7) {
             throw new WrongRentPeriodException("Obey the rules,the rent days should be more than 7 days");
         }

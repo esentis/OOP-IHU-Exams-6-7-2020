@@ -63,7 +63,7 @@ public class Villa extends ExohikiKatoikia {
         return NrOfDays;
     }
 
-    public void setNrOfDays(int NrOfDays) {
+    public void setNrOfDays(int NrOfDays) throws WrongRentPeriodException {
 
         if (NrOfDays <= 30) {
             throw new WrongRentPeriodException("Obey the rules,the rent days should be more than 30 days");
