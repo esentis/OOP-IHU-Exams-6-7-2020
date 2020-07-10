@@ -6,7 +6,6 @@
 package k2;
 
 /**
- *
  * @author esentis
  */
 public class Oromisthios implements Salary {
@@ -24,17 +23,10 @@ public class Oromisthios implements Salary {
     }
 
     public void setOres(double ores) throws LathosEisodou {
-        try {
-            if (ores < 1 || ores > 200) {
-                throw new LathosEisodou("Obey the rules, ores must be between 1 and 200");
-            } else {
-                this.ores = ores;
-            }
-
-        } catch (LathosEisodou errMsg) {
-            System.out.println("Oops I caught an exception" + errMsg.getMessage());
-
+        if (ores < 1 || ores > 200) {
+            throw new LathosEisodou("Obey the rules, ores must be between 1 and 200");
         }
+        this.ores = ores;
     }
 
     public double getOromisthio() {
@@ -47,7 +39,7 @@ public class Oromisthios implements Salary {
 
     @Override
     public double salary() {
-        return ores*oromisthio;
+        return ores * oromisthio;
     }
 
     @Override

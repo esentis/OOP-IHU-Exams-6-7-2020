@@ -2,6 +2,7 @@
 import Classes.Circle;
 import Classes.Rectangle;
 import Classes.Shape;
+
 import java.util.Scanner;
 
 /*
@@ -9,8 +10,8 @@ import java.util.Scanner;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
- *
  * @author esentis
  */
 public class TestShapes {

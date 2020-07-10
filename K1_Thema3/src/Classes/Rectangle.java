@@ -6,7 +6,6 @@
 package Classes;
 
 /**
- *
  * @author esentis
  */
 public class Rectangle implements Shape {
@@ -29,16 +28,10 @@ public class Rectangle implements Shape {
     }
 
     public void setVasi(double vasi) throws WrongDimensionsException {
-        try {
-            if (vasi > 10 || vasi < 50) {
-                this.vasi = vasi;
-            } else {
-                throw new WrongDimensionsException("Wrong Dimensions");
-            }
-        } catch (WrongDimensionsException errMsg) {
-            // We print the error message
-            System.out.println(errMsg.getMessage());
+        if (vasi < 10 || vasi > 50) {
+            throw new WrongDimensionsException("Wrong Dimensions");
         }
+        this.vasi = vasi;
     }
 
     public double getIpsos() {
