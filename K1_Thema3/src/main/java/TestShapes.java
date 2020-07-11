@@ -17,7 +17,6 @@ import java.util.Scanner;
 public class TestShapes {
 
     public static double averageRectangleArea(Shape[] shapes) {
-        double average = 0;
         double sum = 0;
         int rectangles = 0;
         for (Shape shape : shapes) {
@@ -26,9 +25,8 @@ public class TestShapes {
                 rectangles++;
             }
         }
-        // Obviously we dont test if there are no rectangles ^^ (zero division)
-        average = sum / rectangles;
-        return average;
+
+        return rectangles == 0 ? 0 : sum / rectangles;
     }
 
     // You would expect "maxCircleArea" would return maxArea, though it returns maxRadius.. f logic.
